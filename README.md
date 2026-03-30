@@ -30,7 +30,7 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 - [TRL](https://github.com/huggingface/trl) - Hugging Face library for RLHF, DPO, PPO, and SFT training of language models. The standard open-source alignment training library.
 - [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) - High-performance RLHF framework built on Ray, vLLM, and DeepSpeed. Scales to 70B+ models.
 - [Direct Preference Optimization](https://github.com/eric-mitchell/direct-preference-optimization) - Reference implementation of DPO, which simplifies RLHF by eliminating the separate reward model.
-- [DeepSpeed-Chat](https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat) - Microsoft's end-to-end RLHF pipeline (SFT, reward modeling, PPO) with DeepSpeed integration.
+- [DeepSpeed-Chat](https://github.com/deepspeedai/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat) - Microsoft's end-to-end RLHF pipeline (SFT, reward modeling, PPO) with DeepSpeed integration.
 - [RewardBench](https://github.com/allenai/reward-bench) - Allen AI benchmark for evaluating reward models used in alignment training.
 
 ### Guardrails & Output Safety
@@ -60,7 +60,7 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 - [SAELens](https://github.com/decoderesearch/SAELens) - Train, analyze, and use Sparse Autoencoders on language models. Central to much of the recent feature extraction research.
 - [nnsight](https://github.com/ndif-team/nnsight) - Interpret and manipulate neural network internals. Supports causal interventions and tracing in large models (David Bau's group).
 - [pyvene](https://github.com/stanfordnlp/pyvene) - Stanford NLP's unified framework for activation patching, causal tracing, and representation engineering.
-- [CircuitsVis](https://github.com/alan-cooney/CircuitsVis) - Visualization tools for attention patterns and circuit-level interpretability.
+- [CircuitsVis](https://github.com/TransformerLensOrg/CircuitsVis) - Visualization tools for attention patterns and circuit-level interpretability.
 - [Baukit](https://github.com/davidbau/baukit) - Toolkit for editing and understanding neural network representations.
 - [OpenAI Sparse Autoencoder](https://github.com/openai/sparse_autoencoder) - OpenAI's implementation for extracting interpretable features via sparse autoencoders.
 
@@ -124,13 +124,13 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 ### Zero-Knowledge ML Frameworks
 
 - [EZKL](https://github.com/zkonduit/ezkl) - Zero-knowledge proofs of ML model inference. Converts ONNX models to ZK circuits. The most mature ZKML framework.
-- [Giza / Orion](https://github.com/gizatechxyz/orion) - Open-source framework for provable machine learning. ONNX runtime for verifiable inference on-chain.
+- [Giza / Orion](https://github.com/gizatechxyz/orion) - Open-source framework for provable machine learning. ONNX runtime for verifiable inference on-chain. *(Archived)*
 - [RISC Zero zkVM](https://github.com/risc0/risc0) - General-purpose zero-knowledge virtual machine based on RISC-V and zk-STARKs. Supports ML workloads.
 - [zkml](https://github.com/ddkang/zkml) - Proof-of-concept ZKML library using the Halo2 proving system. Converts ONNX models to Halo2 format.
 
 ### Curated ZKML Resources
 
-- [awesome-zkml](https://github.com/worldcoin/awesome-zkml) - Worldcoin's curated list of ZKML resources, frameworks, and tools.
+- [awesome-zkml](https://github.com/worldcoin/awesome-zkml) - Worldcoin's curated list of ZKML resources, frameworks, and tools. *(Archived)*
 
 ### Key Use Cases
 
@@ -227,9 +227,9 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 | 2023 | [Weak-to-Strong Generalization](https://arxiv.org/abs/2312.09390) - Burns, Ye, Klein, Steinhardt | Can weak models supervise strong ones? OpenAI's empirical study of the superalignment problem. |
 | 2024 | [Sleeper Agents](https://arxiv.org/abs/2401.05566) - Hubinger et al. | Demonstrated that deceptive behaviors persist through standard safety training. |
 | 2024 | [Alignment Faking](https://arxiv.org/abs/2412.14093) - Anthropic | First empirical evidence of a large language model engaging in alignment faking to avoid modification. |
-| 2024 | [Model Organisms of Misalignment](https://arxiv.org/abs/2407.04507) - Hubinger et al. | Creating intentionally misaligned models to study and develop detection methods. |
+| 2024 | [Sycophancy to Subterfuge](https://arxiv.org/abs/2406.10162) - Hubinger et al. | Model organisms of misalignment: investigating how LLMs generalize from simple specification gaming to reward tampering. |
 | 2024 | [Towards Guaranteed Safe AI](https://arxiv.org/abs/2405.06624) - Dalrymple et al. | Framework combining world models, safety specifications, and verifiers for provable safety guarantees. |
-| 2025 | [The Claude Model Spec](https://docs.anthropic.com/en/docs/about-claude/claude-model-spec) - Anthropic | Comprehensive specification of Claude's values, behavior, and reasoning. A new approach to alignment via detailed specification. |
+| 2026 | [Claude's New Constitution](https://www.anthropic.com/news/claude-new-constitution) - Anthropic | Comprehensive specification of Claude's values, behavior, and reasoning. A new approach to alignment via detailed specification. |
 
 ---
 
@@ -242,7 +242,7 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 | Organization | Focus | Location |
 |-------------|-------|----------|
 | [Anthropic](https://www.anthropic.com/research) | Constitutional AI, interpretability, RSP | SF, London |
-| [Google DeepMind](https://deepmind.google/safety-and-responsibility/) | Scalable oversight, evaluations, debate | London |
+| [Google DeepMind](https://deepmind.google/responsibility-and-safety/) | Scalable oversight, evaluations, debate | London |
 | [OpenAI Safety](https://openai.com/safety) | Preparedness, superalignment research | SF, London, Dublin |
 | [Meta FAIR](https://ai.meta.com/research/) | Open models, responsible release | Paris, NYC |
 
@@ -262,7 +262,7 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 
 | Organization | Focus | Location |
 |-------------|-------|----------|
-| [UK AI Safety Institute](https://www.gov.uk/government/organisations/ai-safety-institute) | Pre-deployment evaluations, safety testing | London |
+| [UK AI Security Institute](https://www.gov.uk/government/organisations/ai-safety-institute) | Pre-deployment evaluations, safety testing | London |
 | [EU AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office) | EU AI Act implementation and enforcement | Brussels |
 | [NIST AI](https://www.nist.gov/artificial-intelligence) | AI Risk Management Framework, standards | US |
 | [Frontier Model Forum](https://www.frontiermodelforum.org/) | Industry consortium for frontier AI safety | Global |
@@ -271,16 +271,16 @@ Covers the full stack of AI safety: alignment, interpretability, evaluation, for
 
 ## Courses & Educational Resources
 
-- [AGI Safety Fundamentals](https://www.agisafetyfundamentals.com/) - 8-week structured course covering core concepts of AI alignment (BlueDot Impact).
+- [AGI Safety Fundamentals](https://bluedot.org/) - 8-week structured course covering core concepts of AI alignment (BlueDot Impact).
 - [ARENA](https://www.arena.education/) - Hands-on technical curriculum for alignment research engineering.
 - [ML Safety Course](https://course.mlsafety.org/) - Technical AI safety course by the Center for AI Safety. For ML researchers and engineers.
-- [David Silver's RL Course](https://www.deepmind.com/learning-resources/introduction-to-reinforcement-learning-with-david-silver) - 10 lectures from the creator of AlphaGo.
+- [David Silver's RL Course](https://deepmind.google/learning-resources/introduction-to-reinforcement-learning-with-david-silver) - 10 lectures from the creator of AlphaGo.
 - [MATS](https://www.matsprogram.org/) - Research training program for the next generation of alignment researchers. Mentored by leading safety researchers.
 - [AI Safety Camp](https://aisafety.camp/) - Collaborative research meetups where people from diverse backgrounds work on AI safety projects.
 - [Anthropic Research Blog](https://www.anthropic.com/research) - Ongoing publications on interpretability, alignment, and safety.
 - [Alignment Forum](https://www.alignmentforum.org/) - Community forum for AI alignment research discussion.
-- [LessWrong AI Safety Tag](https://www.lesswrong.com/tag/ai-safety) - Long-form discussion and analysis of AI safety topics.
-- [AI Safety Map](https://aisafety.world/) - Interactive visualization of the AI safety research landscape.
+- [LessWrong AI Safety Wiki](https://www.lesswrong.com/w/ai) - Long-form discussion and analysis of AI safety topics.
+- [AI Safety Map](https://www.aisafety.com/landscape-map) - Interactive visualization of the AI safety research landscape.
 
 ---
 
