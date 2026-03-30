@@ -1,0 +1,72 @@
+site_name: Awesome AI Safety
+site_url: https://abdelstark.github.io/awesome-ai-safety
+site_description: A curated collection of resources for building safe, aligned, and trustworthy AI systems.
+repo_url: https://github.com/AbdelStark/awesome-ai-safety
+repo_name: AbdelStark/awesome-ai-safety
+edit_uri: edit/main/README.md
+
+nav:
+  - Home: index.md
+  - Contributing: contributing.md
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - content.tooltips
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AbdelStark/awesome-ai-safety
+      name: GitHub Repository
+  generator: false
+
+extra_css:
+  - assets/extra.css

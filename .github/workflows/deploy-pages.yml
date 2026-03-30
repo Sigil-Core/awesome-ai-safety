@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install mkdocs-material mkdocs-minify-plugin
+
+      - name: Prepare docs from source of truth
+        run: |
+          sed -e 's|(CONTRIBUTING.md)|(contributing.md)|g' \
+              -e 's|#alignment--training|#alignment-training|g' \
+              -e 's|#interpretability--mechanistic-analysis|#interpretability-mechanistic-analysis|g' \
+              -e 's|#red-teaming--evaluation|#red-teaming-evaluation|g' \
+              -e 's|#formal-verification--robustness|#formal-verification-robustness|g' \
+              -e 's|#verifiable-ai--zkml|#verifiable-ai-zkml|g' \
+              -e 's|#governance-policy--compliance|#governance-policy-compliance|g' \
+              -e 's|#safety-benchmarks--datasets|#safety-benchmarks-datasets|g' \
+              -e 's|#courses--educational-resources|#courses-educational-resources|g' \
+              README.md > docs/index.md
+          cp CONTRIBUTING.md docs/contributing.md
+
+      - name: Build site
+        run: mkdocs build --strict
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
